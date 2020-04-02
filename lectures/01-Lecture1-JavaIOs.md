@@ -334,10 +334,18 @@ One important thing that you will have to do, is to **close the streams when you
 Here is a **non-exhausive list of questions** that you can expect in the written tests and exams:
 
 * Why can we say that the Java IO API is a universal API?
+  * Car elle nous permet d'écrire autant dans un fichie que vers un serveur ou dans une zone mémoire .
 * Explain the notions of source, sink and stream in context of IO processing.
+  * La source c'est quand on nous envoie de l'information
+  * la sink c'est quand on envoie de l'information
+  * un stream est comme un tunnel entre les deux
 * What is the difference between an `InputStream` and a `Reader`?
+  * Un Inputstream est fait pour lire de manière binaire
+  * un Reader lit des caractères
 * What is the role of the `FilterInputStream`class?
+  * Ils permettent de décorer les stream avec des fonctionnalités 
 * Write a program that reads the content of a file A, converts all characters to uppercase and writes the result into a file B. Design a solution that makes it possible to apply this logic to a stream connected to any kind of source and sink (e.g. reads input from a network socket and writes output to a file, or vice-versa)
 * Write a class that allows you to read characters from a file, apply two different transformations (e.g. transform to uppercase, transform to lowercase) and write the resulting output into two files. You don't want to read the file twice, but only once. You don't know in advance what the two transformations will be. They will be implemented by two classes that extend the `FilterWriter` class.
 * Why is it better to read blocks of bytes in a single operation, instead of reading a single byte multiple times?
+  * Car si le temps d'accès est long, lire à chaque fois un caractère va prendre beaucoup de ressources. si on lu plusieurs caractères en même temps et que dans un espace temporel proche on veut d'autre caractères de ce 
 * Write the code that is used to consume all bytes from a source connected to an `InputStream`.
